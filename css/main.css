@@ -11,6 +11,7 @@ body {
     right: 30px;
 }
 nav ul {
+    padding: 0px; 
     list-style: none;
     position: fixed; 
     right: 30px; 
