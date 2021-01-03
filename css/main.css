@@ -2,6 +2,8 @@ h1 {
     text-align: left; 
     font-size: 2em;
     font-family:'Helvetica', 'Sans-Serif';
+    padding-left: 10px; 
+    padding-top: 10px; 
 }
 body {
     margin: auto;
@@ -9,14 +11,16 @@ body {
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Sans-Serif';
-    padding: 0;
+    padding-top: 0;
     list-style: none;
     text-align: right; 
 }
 nav ul li, footer ul li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 10px;
     text-align: right; 
+    padding-top: 10px; 
+    padding-right: 10px; 
 }
 p {
     font-size: 1.5em;
