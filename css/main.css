@@ -16,10 +16,6 @@ nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
 }
-a {
-    text-decoration: none;
-    color: #999;
-}
 p {
     font-size: 1.5em;
     line-height: 1.4em;
