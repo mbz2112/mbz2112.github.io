@@ -5,7 +5,10 @@ h1 {
     left: 30px; 
 }
 body {
- 
+    font-size: 0.5em; 
+    font-family: 'Sans-Serif'; 
+    position: fixed; 
+    right: 30px;
 }
 header {
     
