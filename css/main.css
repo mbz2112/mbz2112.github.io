@@ -9,7 +9,7 @@ body {
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Sans-Serif';
-    padding: 70px;
+    padding: 0;
     list-style: none;
     text-align: right; 
 }
