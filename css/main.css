@@ -10,12 +10,11 @@ body {
     position: fixed; 
     right: 30px;
 }
-header {
-    
-}
-nav ul, footer ul {
+nav ul {
     list-style: none;
+    position: fixed; 
+    right: 30px; 
 }
-nav ul li, footer ul li {
+nav ul li {
 
 }
