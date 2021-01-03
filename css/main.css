@@ -1,14 +1,5 @@
-/*body {
-  margin: 60px auto; 
-  width: 70%; 
-} 
-h1 { 
-  font-size: 3em;  
-  font-family: 'Sans-Serif';  
-} */
-
 body {
-    margin: 60px auto;
+    margin: auto;
     width: 70%;
 }
 nav ul, footer ul {
@@ -29,6 +20,7 @@ a:hover {
     text-decoration: underline;
 }
 h1 {
+    text-align: center; 
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
