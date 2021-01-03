@@ -11,10 +11,12 @@ nav ul, footer ul {
     font-family:'Helvetica', 'Sans-Serif';
     padding: 0px;
     list-style: none;
+    text-align: right; 
 }
 nav ul li, footer ul li {
     display: inline;
     margin-right: 20px;
+    text-align: right; 
 }
 p {
     font-size: 1.5em;
