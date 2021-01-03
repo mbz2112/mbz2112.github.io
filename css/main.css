@@ -2,14 +2,13 @@ h1 {
     text-align: left; 
     font-size: 2em;
     font-family:'Helvetica', 'Sans-Serif';
-    padding-left: 10px; 
-    padding-top: 10px; 
+    margin-left: 10px; 
+    margin-top: 10px; 
 }
 body {
     margin-right: 10px;
     margin-left: 10px; 
     margin-top: 10px; 
-    width: 70%;
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Sans-Serif';
