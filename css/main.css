@@ -30,4 +30,6 @@ p {
     line-height: 1.4em; 
     margin-bottom: 200px; 
 }
-
+.Project 1 {
+    border: 10px outset white; 
+} 
