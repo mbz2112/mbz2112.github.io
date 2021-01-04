@@ -13,7 +13,8 @@ nav ul {
 }
 nav ul li {
     display: inline;
-    margin-left: 800px;
+    display: flex; 
+    justify-content: flex-end; 
 }
 #rectangle {
     width: 100px; 
