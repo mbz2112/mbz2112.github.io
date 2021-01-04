@@ -1,11 +1,11 @@
 body {
-    margin: 10px auto;
-    width: 80%;
+    margin: 0px auto;
+    width: 60%;
 }
 h1 {
   text-align: left; 
-  margin-top: 360px; 
-  margin-bottom: 360px; 
+  margin-top: 0px; 
+  margin-bottom: 100px; 
 } 
 nav ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -14,11 +14,7 @@ nav ul {
     font-weight: bold;
 }
 nav ul li {
-    display: flex; 
+    display: inline-flex; 
     justify-content: flex-end; 
 }
-#rectangle {
-    width: 100px; 
-    height: 200px; 
-    background: blue; 
-}
+
