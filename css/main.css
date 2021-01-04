@@ -32,10 +32,13 @@ p {
 }
 .Project 1 {
     border: 10px outset white; 
+    text-align: left; 
 } 
 .Project 2 {
     border: 10px outset white; 
+    text-align: center; 
 } 
 .Project 3 {
     border: 10px outset white; 
+    text-align: right; 
 } 
