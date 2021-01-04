@@ -4,6 +4,8 @@ body {
 }
 h1 {
   text-align: left; 
+  margin-top: 360px; 
+  margin-bottom: 360px; 
 } 
 nav ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
