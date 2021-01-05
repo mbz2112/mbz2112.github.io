@@ -29,18 +29,28 @@ p {
     font-size: 1.5em; 
     line-height: 1.4em; 
 }
-.container{
-    margin-top: 300px; 
-    margin-bottom: 300px; 
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    grid-gap: 1rem; 
+    > div {
+        background: black; 
+        padding: 1rem; 
+        position: relative; 
+        &::before { 
+            content: ""; 
+            display: block; 
+            padding-bottom: 100%; 
+        } 
+        img {
+            position: absolute; 
+            max-width: 100%; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+        }
+    }
 }
-.column {
-    float: left; 
-    width: 33%; 
-    padding: 5px; 
-} 
-.row::after {
-    content: ""; 
-    clear: both; 
-    display: table; 
-}  
+
+
 
