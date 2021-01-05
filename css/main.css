@@ -34,7 +34,6 @@ p {
     margin-bottom: 300px; 
 }
 .grid > div {
-    background: black; 
     padding: 1rem; 
 }
 .grid > div::before {
