@@ -30,15 +30,13 @@ p {
     line-height: 1.4em; 
     margin-bottom: 200px; 
 }
-.Project 1 {
-    border: 10px outset white; 
-    text-align: left; 
+.column {
+    float: left; 
+    width: 33.33%; 
+    padding: 5px; 
 } 
-.Project 2 {
-    border: 10px outset white; 
-    text-align: center; 
-} 
-.Project 3 {
-    border: 10px outset white; 
-    text-align: right; 
+.row::after {
+    content: ""; 
+    clear: both; 
+    display: table; 
 } 
