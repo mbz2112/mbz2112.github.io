@@ -31,8 +31,8 @@ p {
     margin-bottom: 200px; 
 }
 .column {
-    float: left; 
-    width: 30%; 
+    float: center; 
+    width: 33%; 
     padding: 8px; 
 } 
 .row::after {
