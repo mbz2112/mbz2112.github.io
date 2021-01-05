@@ -30,8 +30,12 @@ p {
     line-height: 1.4em; 
     margin-bottom: 200px; 
 }
+.container{
+    margin-top: 300px; 
+    margin-bottom: 300px; 
+}
 .column {
-    float: center; 
+    float: left; 
     width: 30%; 
     padding: 8px; 
 } 
