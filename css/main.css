@@ -33,13 +33,11 @@ p {
     margin-top: 300px; 
     margin-bottom: 300px; 
 }
-.column {
-    float: left; 
-    width: 33%; 
-    padding: 5px; 
-} 
-.row::after {
+.grid > div {
+    padding: 1rem; 
+}
+.grid > div::before {
     content: ""; 
-    clear: both; 
-    display: table; 
+    padding-bottom: 100%; 
+    display: block;
 } 
