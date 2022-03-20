@@ -1,1 +1,44 @@
-<h1>Hello, World</h1>
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+
+    <!-- jquery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script> 
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">    
+</head>
+
+<body> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"> <!-- could put navbar-custom back in -->
+        <a class="navbar-brand white" href="/">Morgan Zee</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link white" href="/">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a id="ResumeButton" class="nav-link white" href="/resume">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a id="ResumeButton" class="nav-link white" href="/projects">Projects</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div style="background-color: coral; font-size: 10px; width: 3000px; position: absolute; right: 0px">Testing this</div>
+
+        <div class="container page_whitespace">   
+            {% block content %}
+            {% endblock %}
+        </div>
+
+</body>
+</html>
