@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+
+    <!-- jquery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script> 
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">    
+</head>
+
+<style>
+.html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.bold{
+    font-weight: bold;
+}
+.navbar-custom{
+    background-color: darkcyan;
+}
+.title_whitespace{
+    padding-top: 180px;
+    padding-bottom:30px;
+}
+
+.page_whitespace{
+    padding-top: 50px;
+}
+
+.resume_whitespace{
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.center{
+    position: relative;
+    text-align: center; 
+}
+
+.centerimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.nopad{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.imgsize{
+    width: 100px;
+}
+
+h1{
+    font-size: 80px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 20px;
+    margin: 0;
+    background-color: coral;
+/*    background: url(https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/1600/900/75/dam/disneyland/attractions/disneyland/sleeping-beauty-castle-walkthrough/sleeping-beauty-castle-exterior-16x9.jpg?1593556896598);
+*/    background-size:  cover;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+h2{
+    font-size: 60px;
+    text-align: center;
+    font-weight: 900;
+    margin: 0;
+    background-color: coral;
+    background-size:  cover;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+h3{
+    font-size: 25px;
+    font-weight: 800;
+    margin: 0;
+    background-color: navy;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.white_font{
+    color: white;
+    font-family: 'Garamond';
+    font-size: 18px;
+}
+
+.white{
+    color: white;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: coral;
+    color: white;
+    text-align: center;
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 12px;
+  position: absolute;
+  left: 265px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.image-cropper {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}  
+</style>
+<body> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"> <!-- could put navbar-custom back in -->
+        <a class="navbar-brand white" href="/">Morgan Zee</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link white" href="/">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a id="ResumeButton" class="nav-link white" href="/resume">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a id="ResumeButton" class="nav-link white" href="/projects">Projects</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div style="background-color: coral; font-size: 10px; width: 3000px; position: absolute; right: 0px">Testing this</div>
+
+        <div class="container page_whitespace">   
+            <h2 class="center">About Me</h2>
+
+    <div class=row>
+        <div class="col-md-2"></div>
+        <div class="col-md-8 center resume_whitespace">
+            <div>Hi, my name is Morgan! I am a student at Barnard College, Columbia University studying Computer Science and Sociology. While Sociology has helped me develop a better understanding of the inner workings of society and its issues, I hope to leverage my Computer Science background to create meaningful solutions that put people first - I want to design technology for social good.</div>
+        </div>
+    </div>
+
+<div class = "row">
+    <h3>Work Experience</h3>
+</div>
+
+<!-- Work Experience Bullet Points 
+ -->
+ <div class="row">
+    <div class="bold">Coding Rooms, Summer Business Analyst</div>
+<ul>
+    <li>Prepared and sent mass marketing emails to 1,833 teachers for Coding Rooms’ first Professional
+Development Day event</li>
+    <li>Provided customer support to Coding Rooms users through the online Intercom messaging platform</li> 
+    <li>Collaborated with graphic designer to produce a slide deck on equity and accessibility in Computer
+Science education for the Head of Business Development to present</li>
+    <li>Conducted outreach by sending 704 LinkedIn invitations to teachers and other potential product users</li>
+</ul>
+
+    <div class="bold">Xiaomi Consumer Electronics Company, Intern</div>
+<ul>
+    <li>Researched portable air purifier products manufactured by competitor companies to potentially produce</li>
+    <li>Initiated project to translate document outlining tasks from Chinese to English to assist future interns</li> 
+</ul>
+</div>
+    
+
+<div class = "row">
+    <h3>Leadership & Campus Involvement</h3>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="bold">Barnard Human-Computer Interaction Lab, Student Researcher</div>
+            <ul>
+            <li>Created storyboards, personas, and prototyped a system design for secure virtual collaboration between
+            life scientists using Balsamiq Wireframes software</li>
+            <li>Conducted interviews with life scientists to better understand user needs</li> 
+            </ul>
+    </div>
+    <div class="col-md-6">
+        <div class="bold">Barnard College Admissions, Student Admissions Representative & Tour Guide</div>
+            <ul>
+            <li>Created storyboards, personas, and prototyped a system design for secure virtual collaboration between
+            life scientists using Balsamiq Wireframes software</li>
+            <li>Conducted interviews with life scientists to better understand user needs</li> 
+            </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="bold">Asian Youth Program, Coordinator & Mentor</div>
+            <ul>
+            <li>Mentor children (ages 6-12) affiliated with WomanKind, a non-profit that provides services for
+survivors of domestic violence</li>
+            <li>Recruit new members, communicate with Columbia University’s Community Impact faculty, provide
+support for fellow mentors, and organize weekly field trips</li> 
+            </ul>
+    </div>
+    <div class="col-md-6">
+        <div class="bold">Introduction to Computer Science and Programming Lab, Teaching Assistant</div>
+            <ul>
+            <li>Guided students learning Java through weekly coding challenges, such as writing an Astrology Chart
+program to learn about conditionals or coding up a Movie Theater to grasp object-oriented programming</li>
+            </ul>
+    </div>
+</div>
+
+<div class = "row">
+    <h3>Projects</h3>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="bold">Navigating Research Opportunities at Columbia University App Design</div>
+            <ul>
+            <li>Collaborated with a team to design a user-centered solution to help students explore research opportunities at Columbia University</li>
+            <li>Conducted user interviews, synthesized research, created detailed yet simplistic visual diagrams, and prototyped a high-fidelity app design using Figma software</li> 
+            </ul>
+    </div>
+    <div class="col-md-6">
+        <div class="bold">Kids Closet: Evaluating Circular Systems for Children's Clothing</div>
+            <ul>
+            <li>Collaborated with a team of undergraduates to write a proposal, identifying the problem of excess waste produced by baby clothing, and conduct extensive research to reimagine a sustainable, circular design solution</li>
+            </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="bold">iFlight: System Design of an App for Flight Attendants</div>
+            <ul>
+            <li>Collaborated with a team of five to create a system design to address the specific user needs of flight attendants who are responsible for conducting safety checks, providing inflight service, and clearing the plane after landing</li>
+            <li>The final design is outlined in this video: https://www.youtube.com/watch?v=WNS2BMe8_dM</li> 
+            </ul>
+    </div>
+    <div class="col-md-6">
+        <div class="bold">Hong Kong Disneyland Ride Finder</div>
+            <ul>
+            <li>Designed a website to allow users to search for rides offered at the Hong Kong Disneyland amusement park</li>
+            <li>Created a template that can be filled with data stored in a dictionary that can be easily updated at any time</li>
+            <li>The main focus was to design the visual information hierarchy to apply to each of the data items and the homepage.</li>
+            </ul>
+    </div>
+</div>
+
+<div class = "row">
+    <h3>Skills & Interests</h3>
+</div>
+ <div class="row">
+    <div class="bold">Computer Skills:</div>&nbsp; 
+    <div>Excel, iMovie, Figma, Python, Java, HTML/CSS, JavaScript/JQuery, SQL</div>
+</div>
+ <div class="row">
+    <div class="bold" style="padding-bottom: 50px;">Interests:</div>&nbsp; 
+    <div>Community Volunteering, UI/UX Design, Social Justice, Hip Hop Dance, Travel, Film, Guitar</div>
+</div>
+        </div>
+</body>
