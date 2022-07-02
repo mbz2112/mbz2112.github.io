@@ -1,10 +1,46 @@
-{% extends "layout.html" %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
 
-{% block content %} 
+    <!-- jquery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script> 
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">    
+</head>
 
 <style>
-
+    .center{
+    position: relative;
+    text-align: center; 
+    }
 </style>
+
+<body> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"> <!-- could put navbar-custom back in -->
+        <a class="navbar-brand white" href="/">Morgan Zee</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link white" href="/">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a id="ResumeButton" class="nav-link white" href="/resume">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a id="ResumeButton" class="nav-link white" href="/projects">Projects</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div style="background-color: coral; font-size: 10px; width: 3000px; position: absolute; right: 0px">Testing this</div>
 
 <div class="container">
 	<div class="jumbotron">
@@ -20,7 +56,6 @@
 		This project was part of a 2-week design sprint hosted by the student organization, Design @ Columbia, and we were given the following prompt to build from: “Your school wants to help students graduate with a better understanding of their career options and interests. Design an experience that helps students explore opportunities for careers.” 
 	</div>
 
-	
 	<h3 style="padding-bottom: 10px;">Research Questions</h3>
 	<li>How might we help students interested in research understand expectations (prerequisites, work culture, funding or credit, work culture, etc.) and learning trajectories for each research position? </li>
 	<li style="padding-bottom: 30px;">How might we build a community to help prospective research students connect with current student researchers?</li>
@@ -28,10 +63,14 @@
 	<h3 style="padding-bottom: 10px;">Competitor Analysis</h3>
 	<div style="padding-bottom: 30px;">At this time, we were not aware of any centralized resources that students could use to explore research opportunities besides the Columbia University and Barnard College research websites. We started our research by exploring potential competitors, more specifically, what platforms Columbia and Barnard students currently use to explore research opportunities, learn about potential professors to conduct research with, and find related jobs. We decided to assess the five competitors we established based on the following criteria: communication style, layout, features/function, content/information, accessibility, target user group, and potential to build community. The following are screenshots of the Competitor Analysis tables we created. 
 	</div>
-
-	<img src="CompetitorAnalysis1.jpeg" alt="Competitor Analysis 1"/>
-	<img src="CompetitorAnalysis2.jpeg" alt="Competitor Analysis 2"/> 
-
+	
+	<div class=row>
+		<div class="col-md-6">
+			<img src="CompetitorAnalysis1.jpeg" alt="Competitor Analysis 1"/>
+		</div>
+		<div class="col-md-6">
+			<img src="CompetitorAnalysis2.jpeg" alt="Competitor Analysis 2"/> 
+		</div>
 </div>
-
-{% endblock %}
+</body>
+</html>
