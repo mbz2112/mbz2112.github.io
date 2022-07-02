@@ -29,6 +29,28 @@
   overflow: hidden;
   border-radius: 50%;
 }
+	
+.block {
+	max-width: 300px;
+	margin: 10px 10px;
+	padding: 25px;
+	background: #f8fffe;
+	border: 1px solid #b0d2cb;
+	color: #0b4237;
+	box-sizing: border-box;
+}
+
+.block_text{
+	font-family: 'Gelasio', serif;
+	font-style: italic;
+	font-size: 20px;
+	line-height: 1.5;
+	margin: 0;
+}
+
+.block_bordered {
+	border-left-width: 10px;
+}
 </style>
 
 <body> 
@@ -88,24 +110,24 @@
 
 	<div class="row" style="padding-bottom: 30px;">
 	<div class="col-md-4">
-	<blockquote class="blockquote blockquote_bordered">
-		<p class="blockquote_text">
+	<blockquote class="block block_bordered">
+		<p class="block_text">
 			“I wish I could have entered a lab earlier, maybe there should be a better way to apply, instead of attending the [Computer Science] Research Fair and emailing professors.” 
 		</p>
 	</blockquote>
 	</div>
 
 		<div class="col-md-4">
-	<blockquote class="blockquote blockquote_bordered">
-		<p class="blockquote_text">
+	<blockquote class="block block_bordered">
+		<p class="block_text">
 			“The harder part [of finding research] was going through the process of getting all the paperwork ready, actually finding the internship I was interested in, but at the same time covered my skill sets.” 
 		</p>
 	</blockquote>
 	</div>
 
 	<div class="col-md-4">
-	<blockquote class="blockquote blockquote_bordered">
-		<p class="blockquote_text">
+	<blockquote class="block block_bordered">
+		<p class="block_text">
 			“My interaction with undergraduates interested in research is limited...so maybe something that would be cool would be to have an opportunity to connect with people outside the program.” 
 		</p>
 	</blockquote>
@@ -196,6 +218,37 @@
 	</div>
 
 	<h3 style="padding-bottom: 10px;">High-Fidelity Prototype</h3>
+	
+	<div style="padding-bottom: 10px;">Based on our user tests, we were able to discuss ways to modify our low-fidelity prototype to better meet the needs of our end users. The modifications we decided to make are summarized as follows:</div>
+	<li>Simplify prototype - our original design was not the most usable as users were confused how to navigate through pages of the app</li>
+	<li style="padding-bottom: 10px;">Redesign and reorganize the toolbar at the bottom of the page - we reduced our design to three icons instead of six to allow for simpler navigation</li>
+
+	<div style="padding-bottom: 10px">Our design consists of three main features summarized as follows</div>
+	<li>Home: recommendations of potential labs, reviews organized by department, and a search icon to take the user to a new page.</li>
+	<li>Chat: allows users to reach out to those who have written reviews and make connections with other student researchers.</li>
+	<li style="padding-bottom: 10px;">Me: profile page that covers the user's basic information and activity, including a survey they can fill out for customization, labs they marked as their favorites, and reviews they wrote</li>
+
+	<div style="padding-bottom: 10px;">We built our high-fidelity prototype on Figma and included screenshots and a link that allows you to click through the prototype below.</div>
+
+	<a href="https://www.figma.com/proto/kbjXPCHVTczwJjIsk47pUp/D-C-Weekend-Design-Sprint-1-MSSJ?node-id=591%3A1566&scaling=scale-down">Figma Prototype</a>
+
+	<div class="row" style="padding-bottom: 10px; padding-top: 30px;"> 
+		<div class="col-md-12">
+			<img src="HiFiPrototype1.jpeg" alt="High Fidelity Prototype 1" width="100%">
+		</div>
+	</div>
+
+	<div class="row" style="padding-bottom: 30px;"> 
+		<div class="col-md-12">
+			<img src="HiFiPrototype2.jpeg" alt="High Fidelity Prototype 2" width="100%">
+		</div>
+	</div>
+
+	<h3 style="padding-bottom: 10px;">Conclusion + Recap</h3>
+
+	<h3 style="padding-bottom: 10px;">Future Work</h3>
+
+	<h3 style="padding-bottom: 10px;">Reflections + Takeaways</h3>
 </div>
 </body>
 </html>
