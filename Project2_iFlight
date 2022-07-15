@@ -114,11 +114,19 @@
 
 		<div style="padding-bottom:30px;">After discussing focus areas to address in our designs, we worked on creating prototypes of the user interface, featured in the images below. I was responsible for creating the paper prototype, which was an interesting method as it allowed me to easily move physical copies of screens around to see if different orders flowed better.</div>
 
+		<div class="row">
+		<div class="col-md-4">
 		<img src="img/Wireframe1.jpeg" alt="Wireframe 1" width="100%" style="padding-bottom: 30px;"/>
+		</div>
 
+		<div class="col-md-4">
 		<img src="img/Wireframe2.jpeg" alt="Wireframe 1" width="100%" style="padding-bottom: 30px;"/>
+		</div>
 
+		<div class="col-md-4">
 		<img src="img/Wireframe3.jpeg" alt="Wireframe 1" width="100%" style="padding-bottom: 30px;"/>
+		</div>
+		</div>
 
 		<div class="row">
 			<div class="col-md-6"><img src="img/PaperPrototype1.jpeg" alt="Paper Prototype 1" width="100%" style="padding-bottom: 30px;"/></div>
