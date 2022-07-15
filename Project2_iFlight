@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+
+    <!-- jquery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script> 
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">    
+</head>
+
+<style>
+</style>
+
+<body style="background-color: floralwhite;">
+	<nav class="navbar navbar-expand-lg" style="background-color: #DED1BD;">
+        <a class="navbar-brand white" style="color: white;" href="/">Morgan Zee</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link white" style="color: white;" href="/">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a id="ResumeButton" style="color: white;" class="nav-link white" href="/resume">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a id="ResumeButton" style="color: white;" class="nav-link white" href="/projects">Projects</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+	<div class="row" style="background-color: #DED1BD;">
+		<div class="col-md-4" style="padding-left: 100px; padding-right: 20px; padding-bottom: 100px; padding-top: 100px;">
+			<img src="img/TitleImage.jpeg" alt="Wearable Image" width="100%"/>
+		</div>
+		<h2 class="col-md-8" style="font-family: serif; text-align: center; color: floralwhite; font-size: 50px; font-weight: 600; margin: 0; padding-left: 20px; padding-right: 100px; padding-bottom: 100px; padding-top: 100px;">iFlight: System Design of an App for Flight Attendants</h2>
+	</div>
+
+	<div class=container>
+		<div style="padding-top: 30px; padding-bottom: 30px;">As part of an Introduction to Contextual Design course I took, I worked on a project with four other undergraduate students to design a system that addresses the specific needs of flight attendants. Our guidelines were to select a specific user group to design a system for. Our final deliverable was in the form of an interactive high fidelity prototype we were able to click through and demonstrate to our peers. As we brainstormed a user group to focus on, we considered the circumstances – being in the midst of a global pandemic – and what industries might be affected by it. We decided to focus on the user needs of flight attendants.</div>
+
+		<div style="padding-bottom: 30px;">Our research process consisted of the following components, which we did over the course of the semester:</div> 
+
+		<li>Investigating Users: Conducting Interviews</li>
+		<li>Research Synthesis: Creation of Work Models</li>
+		<li>User Environment: Brainstorm and Design</li>
+		<li>Prototypes: Wireframes, Paper and Low-Fidelity</li>
+		<li>Evaluations: User Testing</li>
+		<li>System Design: High Fidelity Prototype</li>
+
+		<h3 style="padding-bottom: 30px; padding-top:50px">Investigating Users: Conducting Interviews</h3>
+
+		<div style="padding-bottom: 30px;">As a group, we conducted a total of five interviews with flight attendants. The flight attendants we interviewed consisted of current and retired employees for airlines based in Asia. Out of the five interviews, I conducted two in collaboration with another group member, where we rotated between notetaker and facilitator roles.</div>
+
+		<div style="padding-bottom: 30px;">Speaking with flight attendants gave us more insight into their daily tasks. Distributed across first class, business class and economy class based on experience level, flight attendants are responsible for checking equipment on the aircraft, conducting meal checks with airline caterers, helping passengers to their seats, conducting safety checks, servicing food and beverages, meeting passenger requests throughout the flight, preparing for landing, and facilitating a cleanse of the aircraft and final safety checks. Their main goal is to ensure passengers travel comfortably and safely.</div>
+
+		<div style="padding-bottom:  30px;">The main problems the flight attendants we interviewed face can be summarized in the following three categories:</div>
+
+		<ol>
+		<li><b>Safety and Security</b>: Many “what ifs” can happen if safety procedures are not carried out properly</li>
+		<li><b>Time Management</b>: Flight attendants have many tasks to juggle prior and during the flight – it is easy to forget certain steps.</li>
+		<li><b>Difficulty with Customer Service</b>: Hospitality and customer service is a significant part of the role – sometimes there are difficult passengers on the flight who flight attendants have to deal with.</li>
+		</ol>
+
+		<div style="padding-top:  20px; padding-bottom: 30px">These problems shed light on various opportunities:</div>
+
+		<div style="padding-bottom: 30px;">A common thread between these three categories is the importance of communication to ensure safety and security checks run smoothly, tasks are delegated evenly to address issues of time management, and customer needs are met. We also identified breakdowns in communication between stakeholders. For instance, while supervisors use iPads to manage information, some of the flight attendants we spoke to rely on physical post-it notes to communicate responsibilities within the galley. <b>Facilitating better communication may help avoid unnecessary back and forth trips between the cabin and the galley and prevent important information from getting lost or misunderstood.</b></div>
+
+		<div style="padding-bottom: 50px;">We also identified addressing the emotional labor flight attendants experience as an opportunity to iterate on. Throughout the interviews, we found that flight attendants experience difficulty dealing with drunk, argumentative or demanding customers with unrealistic requests, which may require them to manage their emotions to do their job. <b>Focusing on mental health and addressing the emotional labor flight attendants experience was a potential area to build on.</b></div>
+
+		<h3 style="padding-bottom: 30px;">Research Synthesis: Work Models</h3>
+
+		<div style="padding-bottom: 30px;">To synthesize our interview findings, we created several work models, including an <b>affinity diagram, sequence diagram, flow model and cultural model.</b> I worked with two other team members on the affinity diagram and sequence diagram.</div>
+
+		<div style="padding-bottom: 30px;">The affinity diagram, featured below, summarizes the tasks that our users perform. We separated these tasks into four main categories: safety and security, customer service, organization and time management, and teamwork.</div>
+
+		<img src="img/AffinityDiagram.jpeg" alt="Affinity Diagram" width="100%" style="padding-bottom: 30px;"/>
+
+		<div style="padding-bottom: 30px;">The sequence diagram, featured below, represents the multitude of tasks flight attendants have to do and the breakdowns they experience at each phase (represented by the lightning bolts in the diagram).</div>
+
+		<img src="img/SequenceDiagram.jpeg" alt="Sequence Diagram" width="100%" style="padding-bottom: 30px;"/>
+
+		<div style="padding-bottom: 50px;">Creating these work models helped us identify common breakdowns our target users were facing. It was not only easier to see patterns in a visual manner but also made it easier to present our findings to others. After meeting as a group to discuss our findings from creating these work models, we decided to focus on the need for <b>enhanced communication between flight attendants to address their time management and customer service breakdowns.</b></div>
+		
+		<h3 style="padding-bottom: 30px;">User Environment: Brainstorm and Design</h3>
+
+		<div style="padding-bottom: 30px;">We conducted a brainstorming session over a call, where we each communicated the concerns our users expressed and where common breakdowns occur. After discussing our focus area, we brainstormed various ideas of system designs to proceed with.</div>
+
+		<div style="padding-bottom: 30px;">For our design concept, we decided on a wearable device to be worn on the wrist of our users. This wearable would help our users manage their tasks and communicate in an efficient and organized manner with their colleagues. We decided on a wearable device as the cabin crew may not have the capacity to constantly check their phones throughout the flight. Furthermore, a wearable would be subtle and can act as an accessory that matches their uniforms.</div>
+
+		<div style="padding-bottom: 30px;">This wearable device would provide flight attendants with the following:</div>
+
+		<li>Easy access to in-flight information</li>
+		<li>Transparency across the cabin crew</li>
+		<li>Efficient communication between cabin crew members</li>
+		<li>Ability to assign, monitor and communicate tasks across the aircraft</li>
+
+		<div style="padding-top: 30px; padding-bottom: 30px;">An important part of the process is to note limitations and constraints. We identified a couple that we might encounter if we were to implement our design:</div>
+
+		<li>Restricted use of signal when the aircraft is in the air</li>
+		<li>Security issues pertaining to sharing sensitive information across devices</li>
+		<li>Cost increases to produce and maintain the device</li>
+		<li>Small screen size poses challenges in some of the features we hope to implement, including a chat functionality that would involve typing</li>
+
+		<h3 style="padding-top:  50px; padding-bottom: 30px;">Prototypes: Wireframes, Paper and Low-Fidelity</h3>
+
+		<div style="padding-bottom:30px;">After discussing focus areas to address in our designs, we worked on creating prototypes of the user interface, featured in the images below. I was responsible for creating the paper prototype, which was an interesting method as it allowed me to easily move physical copies of screens around to see if different orders flowed better.</div>
+
+		<img src="img/Wireframe1.jpeg" alt="Wireframe 1" width="100%" style="padding-bottom: 30px;"/>
+
+		<img src="img/Wireframe2.jpeg" alt="Wireframe 1" width="100%" style="padding-bottom: 30px;"/>
+
+		<img src="img/Wireframe3.jpeg" alt="Wireframe 1" width="100%" style="padding-bottom: 30px;"/>
+
+		<div class="row">
+			<div class="col-md-6"><img src="img/PaperPrototype1.jpeg" alt="Paper Prototype 1" width="100%" style="padding-bottom: 30px;"/></div>
+			<div class="col-md-6"><img src="img/PaperPrototype2.jpeg" alt="Paper Prototype 2" width="100%" style="padding-bottom: 30px;"/></div>
+		</div>
+
+		<img src="img/LowFiPrototype.jpeg" alt="Low Fidelity Prototype" width="100%" style="padding-bottom: 30px;"/>
+
+		<h3 style="padding-top:  50px; padding-bottom: 30px;">Evaluations: User Testing</h3>
+
+		<div style="padding-bottom: 30px;">To test our designs, we conducted three evaluations. Two of the evaluations were conducted with our target users (current and former flight attendants) and one was conducted with people who have no prior knowledge of the airline industry, which was still informative to test usability. For all evaluations, we used the Think Aloud method, where we asked evaluators to talk through each decision they made, and the Wizard of Oz technique, which allowed users to interact with the interface prior to its implementation. 
+
+		For our evaluations, we provided users with specific tasks to complete and asked them to share their understandings and concerns out loud with us. The list of tasks are included below: </div>
+
+		<li>Unlock the off-duty screen</li>
+		<li>Check your messages</li>
+		<li>Identify new messages</li>
+		<li>Enter a chat room</li>
+		<li>Send a message</li>
+		<li>Adjust settings (brightness and text size)</li>
+		<li>Switch to night mode</li>
+		<li>Check calendar and add a new event</li>
+		<li>Synch to the flight you are currently on</li>
+		<li>Accept passenger service requests</li>
+		<li>Check tasks</li>
+		<li>Reassign tasks to other flight attendants</li>
+		<li>Switch status to "Do Not Disturb"</li>
+		<li>Check for flight information</li>
+		<li>Check for passenger food and beverage information</li>
+		<li>Perform safety check for landing</li>
+
+		<div style="padding-top: 30px; padding-bottom: 30px;">Based on our user evaluations, here's what worked:</div>
+
+		<li>Users were able to easily find the settings menu and home screen; they found non-flight attendant specific workflows easy to follow</li>
+		<li>Spoke highly of the wearable smartwatch form</li>
+		<li>Appreciated the use of familiar icon symbols, as it allowed for smooth navigation</li>
+		<li>Flight attendant evaluators liked the meal restriction summary page and noted the system design demonstrates an understanding of cabin crew needs and breakdowns</li>
+
+		<div style="padding-top: 30px; padding-bottom: 30px;">Evaluators also expressed concerns and difficulties. Here's what didn't work:</div>
+
+		<li>Difficulty viewing certain text and images on the screen due to the size of the interface</li>
+
+		<li>Worried about missing notifications on the lock screen</li>
+
+		<li>Navigation can be refined to be more clear</li>
+
+		<li>Confusion about the audio to text functionality – worried about the possibility of errors as the aircraft can be noisy and might pick up other sounds</li>
+
+		<li>Unsure about the difference between the on-duty and off-duty lock screens</li>
+
+		<li>Concerned about poor connectivity in the air</li>
+
+		<h3 style="padding-top:  50px; padding-bottom: 30px;">System Design: High-Fidelity Prototype</h3>
+
+		<div style="padding-bottom: 30px;">We iterated on our prototypes based on the feedback we received from the evaluations and user tests. As a group, we discussed the overall concept, features we wanted to add and changes that needed to be made. Three of our group members were responsible for building the final high-fidelity prototype in Figma, and I was responsible for writing up and communicating important features of our final design and future avenues we could take if we had more time, which I did in collaboration with another group member.</div>
+
+		<div style="padding-bottom: 30px;">The final design is a wearable device that improves workflows and minimizes stress for flight attendants by allowing them to keep track of their tasks, communicate and delegate tasks to one another, manage their schedules and access important flight information. Some of the key screens and features are summarized as follows:</div>
+
+		<li><b>Chat Function</b>: assists users with communication through audio to text functionality, a keyboard, a pen functionality, and pre-loaded frequently used phrases.</li>
+		<li><b>Calendar Function</b>: allows users to view their own schedules, which they can organize through the “Events Details” screen. They also have access to a roster to determine which colleagues are on their flight.</li>
+		<li><b>Sync Flight Function</b>: allows users to select and connect with their flights through Bluetooth.</li>
+		<li><b>On-Duty Lock Screen</b>: allows users to change their availability status. They can also accept passenger requests and view the tasks that they were delegated.</li>
+		<li><b>On-Duty Home Screen</b>: users can view their tasks through a drop down menu, which addresses the problem of notifications disappearing prior to the completion of a task.</li>
+		<li><b>Flight Information Screen</b>: provides information about flight departure and arrival times, weather, gate number, etc.</li>
+		<li><b>Dining Information Screen</b>: informs users of passenger dietary restrictions through a color-coded visual seating chart of the aircraft.</li>
+		<li><b>To-Do Checklist</b>: allows users to check off tasks when they complete them.</li>
+		<li><b>Aircraft Section Preview Screen</b>: allows users to identify passengers who have requested service and where they are seated.</li>
+
+		<div style = "padding-top: 30px; padding-bottom: 30px;">Below are annotated images of our high-fidelity prototype and a link to a video walk-through of our final design:</div>
+
+		<a href="https://youtu.be/WNS2BMe8_dM" style="padding-bottom: 30px;">Video Demonstration</a>
+
+		<img src="img/HiFi1.jpeg" alt="High Fidelity 1" width="100%"/>
+
+		<img src="img/HiFi2.jpeg" alt="High Fidelity 2" width="100%"/>
+
+		<img src="img/HiFi3.jpeg" alt="High Fidelity 3" width="100%"/>
+
+		<img src="img/HiFi4.jpeg" alt="High Fidelity 4" width="100%"/>
+
+		<img src="img/HiFi5.jpeg" alt="High Fidelity 5" width="100%"/>
+
+		<img src="img/HiFi6.jpeg" alt="High Fidelity 6" width="100%"/>
+
+		<img src="img/HiFi7.jpeg" alt="High Fidelity 7" width="100%"/>
+
+		<h3 style="padding-top:  50px; padding-bottom: 30px;">Conclusion + Recap</h3>
+
+
+		<div style="padding-bottom: 30px;">Engaging in the contextual design process, we started by selecting a target user group, determining their specific needs and goals, and ended with a high-fidelity prototype of our system design. The user group we decided to focus on were flight attendants, which we found interesting given that their role requires them to do many important tasks such as safety checks, but is also largely customer-facing, which may require additional emotional management. On top of that, their industry was largely impacted by the pandemic, so we were interested in hearing about their experiences.</div>
+
+		<div style="padding-bottom: 50px;">We started by understanding user needs by conducting semi-structured interviews, which means we had a list of prepared questions but pivoted depending on the direction of the discussion. Using the qualitative interview data, we constructed work models to organize and represent our findings in a visual manner. Afterwards, we met as a group to brainstorm and design our user environment. Based on our discussions as a group, we each worked on various low-fidelity prototypes to determine what the user interface would look like, which we used to conduct our user tests. Based on the evaluations from our user tests, we designed a high-fidelity prototype of a wearable system that assists flight attendants in time management and communication to enhance their workflow and address the user needs they expressed.</div>
+
+		<h3 style="padding-bottom: 30px;">Future Work</h3>
+
+
+		<div style="padding-bottom: 30px;">Future work could focus on handling errors within the chat functionality. We tried to combat this by providing the user with multiple options beyond a keyboard, such as audio to text, a dictionary of key phrases and a pen function, but sometimes less is more. More options does not necessarily make it easier to use the chat function and minimize errors made when using this screen – future work could iterate on this.</div>
+
+		<div style="padding-bottom: 30px;">If we had more time, we could have also conducted more evaluations and user tests to ensure optimal usability of our device. In this next round, we would use our high-fidelity prototype to conduct user tests. While we were able to address many user needs and implement many features, I believe we can still simplify our design to make it more user friendly.</div>
+
+		<div style="padding-bottom: 30px;">Considering the size of the device is small (as it is a wearable watch), it might be worth redesigning the screens that contain seating information (such as the Dining Information and Aircraft Section Preview Screens), as it looks cramped and can be difficult to view on such a tiny device.</div>
+
+		<div style="padding-bottom: 50px;">Finally, another issue we wanted to address but did not get the chance to are the mental health and emotional labor issues our target users expressed, especially during the pandemic and its effects on the travel industry. Future iterations could address mental health and wellness.</div>
+
+		<h3 style="padding-bottom: 30px;">Reflections + Takeaways</h3>
+
+		<div style="padding-bottom: 30px;">Working on this project over the course of the semester taught me a lot about the design process. As this was my first time learning about contextual design, having the opportunity to work on a semester-long project and experience the process first hand was the best way to learn.</div>
+
+		<div style="padding-bottom: 30px;">One of my biggest takeaways is that our <b>users are the number one priority.</b> We cannot simply assume what our users need, but rather we need to gain an understanding of their specific needs and goals by conducting interviews and user tests. My sociology background came in handy when we were writing interview questions, as I was able to craft questions that allowed us to better understand user needs without directly asking what they need. Allowing interviewees to talk about their tasks and processes allowed them to identify new breakdowns or issues they may not have come in with. <b>Being open to opportunities for growth you may not have come in with was a big takeaway for me.</b></div>
+
+		<div style="padding-bottom: 50px;">Finally, <b>strong teamwork and collaboration proved to be a driving force</b> throughout this project. We were able to delegate tasks that played to our unique strengths, while also providing each of us with  opportunities to learn and grow.</div>
+
+	</div>
+</body>
